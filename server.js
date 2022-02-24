@@ -50,7 +50,7 @@ function init() {
                 case "Update Employee Role":
                     return updateEmployee();
                     break;
-                case " View All Roles":
+                case "View All Roles":
                     return viewRoles();
                     break;
                 case "Add Role":
@@ -66,15 +66,7 @@ function init() {
         })
     };
 
-    function addDepartment() {
-        inquirer.prompt([
-            {
-                type: 'input',
-                name: 'departmentName',
-                message: 'What is the name of the department?'
-            }
-        ])
-    };
+    
 
     function addRole() {
         inquirer.prompt([

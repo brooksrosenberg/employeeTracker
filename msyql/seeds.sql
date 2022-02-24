@@ -11,7 +11,7 @@ VALUES(1, 'Sales Lead', 'Sales', 100000),
 (7, 'Legal Team Lead', 'Legal', 250000),
 (8, 'Lawyer', 'Legal', 190000);
 
-INSERT INTO employee(id, first_name, title, department_id, salary, manager)
+INSERT INTO employee(id, first_name, last_name, title, department_id, salary, manager)
 VALUES(1, 'Mark', 'Ruffalo', 'Sales Lead', 'Sales', 100000, 'Samuel L. Jackson'),
 (2, ' Robert', 'Downey Jr.', 'Salesperson', 'Sales', 80000, 'Samuel L. Jackson'),
 (3, 'Scarlett', 'Johansson', 'Lead Engineer', 'Engineering', 150000, 'Samuel L. Jackson'),
