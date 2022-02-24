@@ -66,56 +66,6 @@ function init() {
         })
     };
 
-    
-
-    function addRole() {
-        inquirer.prompt([
-            {
-                type: 'input',
-                name: 'roleName',
-                message: 'What is the name of the role?'
-            },
-            {
-                type: 'input',
-                name: 'roleSalary',
-                message: 'What is the salary of the role?'
-            },
-            {
-                type: 'list',
-                name: 'departmentType',
-                message: 'Which department does the role belong to?',
-                choices: ['Engineering', 'Finance', 'Legal', 'Sales']
-            }
-        ])
-    };
-
-    function addEmployee() {
-        inquirer.prompt([
-            {
-                type: 'input',
-                name: 'employeeFirstName',
-                message: "What is the employee's first name?"
-            },
-            {
-                type: 'input',
-                name: 'employeeLastName',
-                message: "What is the employee's last name?"
-            },
-            {
-                type: 'list',
-                name: 'employeeRole',
-                message: "What is the employee's role?",
-                choices: ['Sales Lead', 'Salesperson', 'Lead Engineer', 'Software Engineer', 'Account Manager', 'Accountant', 'Legal Team Lead', 'Lawyer']
-            },
-            {
-                type: 'list',
-                name: 'employeeManager',
-                message: "Who is the employee's manager?",
-                choices: [ 'None', 'Mark Ruffalo', 'Robert Downey Jr.', 'Scarlett Johansson', 'Chris Evans', 'Chris Hemsworth', 'Benedict Cumberbatch', 'Elizabeth Olsen', 'Jeremy Renner', 'Samuel L. Jackson']
-            }
-        ])
-    };
-
 
     openingQuestions();
 
