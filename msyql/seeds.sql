@@ -1,23 +1,28 @@
-INSERT INTO department(name)
+USE employees_db;
+
+INSERT INTO department (dep_name)
 VALUES ('Engineering'), ('Finance'), ('Legal'), ('Sales');
 
-INSERT INTO employee_role(id, title, department_id, salary)
-VALUES(1, 'Sales Lead', 'Sales', 100000),
-(2, 'Salesperson', 'Sales', 80000),
-(3, 'Lead Engineer', 'Engineering', 150000),
-(4, 'Software Engineer', 'Engineering', 120000),
-(5, 'Account Manager', 'Finance', 160000),
-(6, 'Accountant', 'Finance', 125000),
-(7, 'Legal Team Lead', 'Legal', 250000),
-(8, 'Lawyer', 'Legal', 190000);
+INSERT INTO roles(title, department_id, salary)
+VALUES('Sales Lead', 4, 100000),
+('Salesperson', 4, 80000),
+('Lead Engineer', 1, 150000),
+('Software Engineer', 1, 120000),
+('Account Manager', 2, 160000),
+('Accountant', 2, 125000),
+('Legal Team Lead', 3, 250000),
+('Lawyer', 3, 190000);
 
-INSERT INTO employee(id, first_name, last_name, title, department_id, salary, manager)
-VALUES(1, 'Mark', 'Ruffalo', 'Sales Lead', 'Sales', 100000, 'Samuel L. Jackson'),
-(2, ' Robert', 'Downey Jr.', 'Salesperson', 'Sales', 80000, 'Samuel L. Jackson'),
-(3, 'Scarlett', 'Johansson', 'Lead Engineer', 'Engineering', 150000, 'Samuel L. Jackson'),
-(4, 'Chris', 'Evans', 'Software Engineer', 'Engineering', 120000, 'Samuel L. Jackson'),
-(5, 'Chris', 'Hemsworth', 'Account Manager', 'Finance', 160000, 'Samuel L. Jackson'),
-(6, 'Benedict', 'Cumberbatch', 'Accountant', 'Finance', 125000, 'Samuel L. Jackson'),
-(7, 'Elizabeth', 'Olsen', 'Legal Team Lead', 'Legal', 250000, 'Samuel L. Jackson'),
-(8, 'Jeremy', 'Renner', 'Lawyer', 'Legal', 250000, 'Samuel L. Jackson');
-(9, 'Samuel', 'L. Jackson', 'Lawyer', 'Legal', 250000, 'null')
+INSERT INTO employee(first_name, last_name, role_id, manager_id)
+VALUES
+('Samuel', 'L. Jackson', 3, NULL),
+('Mark', 'Ruffalo', 4, 1),
+('Robert', 'Downey Jr.', 4,1),
+('Scarlett', 'Johansson', 1, 1),
+('Chris', 'Evans', 1, 1),
+('Chris', 'Hemsworth', 2, 1),
+('Benedict', 'Cumberbatch', 2, 1),
+('Elizabeth', 'Olsen', 3, 1),
+('Jeremy', 'Renner', 3, 1);
+
+
